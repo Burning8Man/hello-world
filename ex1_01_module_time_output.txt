@@ -1,0 +1,6 @@
+Tue Sep  4 02:19:57 2018
+
+Delta GCD1 (Recursion realization of Euclidean algorithm) = 3.337860107e-06
+Delta GCD2 (Classic Euclidean algorithm) = 0.009662866592
+
+GCD1 faster than GCD2 by 2895 times!!!
