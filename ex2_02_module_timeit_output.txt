@@ -1,0 +1,6 @@
+Tue Sep  4 02:00:54 2018
+
+Delta Eratosthenes algorithm = 7.828766642996925
+Delta Atkin algorithm = 59.988633288994606
+
+Eratosthenes algorithm faster than Atkin algorithm by 8 times!!!

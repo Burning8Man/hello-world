@@ -1,0 +1,30 @@
+Tue Sep  4 02:19:04 2018
+
+Recursion realization of Euclidean algorithm:
+
+         7 function calls (5 primitive calls) in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+      3/1    0.000    0.000    0.000    0.000 alg_ex_1.py:6(gcd1)
+        1    0.000    0.000    0.000    0.000 ex1_03_calc_delta_with_cProfile.py:14(main_gcd1)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Classic realization of Euclidean algorithm:
+
+         5 function calls in 0.011 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.011    0.011 <string>:1(<module>)
+        1    0.011    0.011    0.011    0.011 alg_ex_1.py:22(gcd2)
+        1    0.000    0.000    0.011    0.011 ex1_03_calc_delta_with_cProfile.py:17(main_gcd2)
+        1    0.000    0.000    0.011    0.011 {built-in method builtins.exec}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
