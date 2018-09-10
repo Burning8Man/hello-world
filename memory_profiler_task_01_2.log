@@ -1,0 +1,76 @@
+Filename: /home/krugloff/PycharmProjects/algorithms/lesson_060/task_01_2.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     9  14.394531 MiB  14.394531 MiB   @profile(precision=6, stream=fp)
+    10                             def atkin(nmax):
+    11                                 """
+    12                                 Returns a list of prime numbers below the number "nmax"
+    13                                 """
+    14  14.394531 MiB   0.000000 MiB       is_prime = dict([(i, False) for i in range(5, nmax + 1)])
+    15  14.394531 MiB   0.000000 MiB       for x in range(1, int(math.sqrt(nmax)) + 1):
+    16  14.394531 MiB   0.000000 MiB           for y in range(1, int(math.sqrt(nmax)) + 1):
+    17  14.394531 MiB   0.000000 MiB               n = 4 * x ** 2 + y ** 2
+    18  14.394531 MiB   0.000000 MiB               if (n <= nmax) and ((n % 12 == 1) or (n % 12 == 5)):
+    19  14.394531 MiB   0.000000 MiB                   is_prime[n] = not is_prime[n]
+    20  14.394531 MiB   0.000000 MiB               n = 3 * x ** 2 + y ** 2
+    21  14.394531 MiB   0.000000 MiB               if (n <= nmax) and (n % 12 == 7):
+    22  14.394531 MiB   0.000000 MiB                   is_prime[n] = not is_prime[n]
+    23  14.394531 MiB   0.000000 MiB               n = 3 * x ** 2 - y ** 2
+    24  14.394531 MiB   0.000000 MiB               if (x > y) and (n <= nmax) and (n % 12 == 11):
+    25  14.394531 MiB   0.000000 MiB                   is_prime[n] = not is_prime[n]
+    26  14.394531 MiB   0.000000 MiB       for n in range(5, int(math.sqrt(nmax)) + 1):
+    27  14.394531 MiB   0.000000 MiB           if is_prime[n]:
+    28  14.394531 MiB   0.000000 MiB               ik = 1
+    29  14.394531 MiB   0.000000 MiB               while (ik * n ** 2 <= nmax):
+    30  14.394531 MiB   0.000000 MiB                   is_prime[ik * n ** 2] = False
+    31  14.394531 MiB   0.000000 MiB                   ik += 1
+    32  14.394531 MiB   0.000000 MiB       primes = []
+    33  14.394531 MiB   0.000000 MiB       for i in range(nmax + 1):
+    34  14.394531 MiB   0.000000 MiB           if i in [0, 1, 4]:
+    35  14.394531 MiB   0.000000 MiB               pass
+    36  14.394531 MiB   0.000000 MiB           elif i in [2, 3] or is_prime[i]:
+    37  14.394531 MiB   0.000000 MiB               primes.append(i)
+    38                                     else:
+    39  14.394531 MiB   0.000000 MiB               pass
+    40  14.394531 MiB   0.000000 MiB       return primes
+
+
+Filename: /home/krugloff/PycharmProjects/algorithms/lesson_060/task_01_2.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     9  14.750000 MiB  14.750000 MiB   @profile(precision=6, stream=fp)
+    10                             def atkin(nmax):
+    11                                 """
+    12                                 Returns a list of prime numbers below the number "nmax"
+    13                                 """
+    14  15.894531 MiB   1.144531 MiB       is_prime = dict([(i, False) for i in range(5, nmax + 1)])
+    15  15.894531 MiB   0.000000 MiB       for x in range(1, int(math.sqrt(nmax)) + 1):
+    16  15.894531 MiB   0.000000 MiB           for y in range(1, int(math.sqrt(nmax)) + 1):
+    17  15.894531 MiB   0.000000 MiB               n = 4 * x ** 2 + y ** 2
+    18  15.894531 MiB   0.000000 MiB               if (n <= nmax) and ((n % 12 == 1) or (n % 12 == 5)):
+    19  15.894531 MiB   0.000000 MiB                   is_prime[n] = not is_prime[n]
+    20  15.894531 MiB   0.000000 MiB               n = 3 * x ** 2 + y ** 2
+    21  15.894531 MiB   0.000000 MiB               if (n <= nmax) and (n % 12 == 7):
+    22  15.894531 MiB   0.000000 MiB                   is_prime[n] = not is_prime[n]
+    23  15.894531 MiB   0.000000 MiB               n = 3 * x ** 2 - y ** 2
+    24  15.894531 MiB   0.000000 MiB               if (x > y) and (n <= nmax) and (n % 12 == 11):
+    25  15.894531 MiB   0.000000 MiB                   is_prime[n] = not is_prime[n]
+    26  15.894531 MiB   0.000000 MiB       for n in range(5, int(math.sqrt(nmax)) + 1):
+    27  15.894531 MiB   0.000000 MiB           if is_prime[n]:
+    28  15.894531 MiB   0.000000 MiB               ik = 1
+    29  15.894531 MiB   0.000000 MiB               while (ik * n ** 2 <= nmax):
+    30  15.894531 MiB   0.000000 MiB                   is_prime[ik * n ** 2] = False
+    31  15.894531 MiB   0.000000 MiB                   ik += 1
+    32  15.894531 MiB   0.000000 MiB       primes = []
+    33  15.894531 MiB   0.000000 MiB       for i in range(nmax + 1):
+    34  15.894531 MiB   0.000000 MiB           if i in [0, 1, 4]:
+    35  15.894531 MiB   0.000000 MiB               pass
+    36  15.894531 MiB   0.000000 MiB           elif i in [2, 3] or is_prime[i]:
+    37  15.894531 MiB   0.000000 MiB               primes.append(i)
+    38                                     else:
+    39  15.894531 MiB   0.000000 MiB               pass
+    40  15.894531 MiB   0.000000 MiB       return primes
+
+
